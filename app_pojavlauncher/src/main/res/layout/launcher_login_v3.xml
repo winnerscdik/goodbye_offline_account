@@ -126,11 +126,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <CheckBox
-        android:id="@+id/login_switch_offline"
+        android:id="@+id/login_switch_local"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="@string/login_offline_label"
+        android:text="@string/login_local_label"
         app:layout_constraintStart_toStartOf="@+id/login_switch_remember"
         app:layout_constraintTop_toBottomOf="@+id/login_switch_remember" />
 
@@ -145,8 +145,8 @@
 
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintStart_toStartOf="@+id/login_switch_offline"
-        app:layout_constraintTop_toBottomOf="@+id/login_switch_offline" />
+        app:layout_constraintStart_toStartOf="@+id/login_switch_local"
+        app:layout_constraintTop_toBottomOf="@+id/login_switch_local" />
 
     <ProgressBar
         android:id="@+id/launcherAccProgress"

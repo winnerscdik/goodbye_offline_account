@@ -77,7 +77,7 @@ public class PojavLoginActivity extends BaseActivity
     
     private EditText edit2, edit3;
     private final int REQUEST_STORAGE_REQUEST_CODE = 1;
-    private CheckBox sRemember, sOffline;
+    private CheckBox sRemember, sLocal;
     private TextView startupTextView;
     private SharedPreferences firstLaunchPrefs;
     private MinecraftAccount mProfile = null;
@@ -246,8 +246,8 @@ public class PojavLoginActivity extends BaseActivity
         edit3 = (EditText) findViewById(R.id.login_edit_password);
         
         sRemember = findViewById(R.id.login_switch_remember);
-        sOffline  = findViewById(R.id.login_switch_offline);
-        sOffline.setOnCheckedChangeListener((p1, p2) -> {
+        sLocal  = findViewById(R.id.login_switch_local);
+        sLocal.setOnCheckedChangeListener((p1, p2) -> {
             // May delete later
             edit3.setEnabled(!p2);
         });
@@ -579,7 +579,7 @@ public class PojavLoginActivity extends BaseActivity
         accountDialog.show();
     }
     
-    private MinecraftAccount loginOffline() {
+    private MinecraftAccount loginLocal() {
         new File(Tools.DIR_ACCOUNT_OLD).mkdir();
         
         String text = edit2.getText().toString();
@@ -590,7 +590,7 @@ public class PojavLoginActivity extends BaseActivity
         } else if (new File(Tools.DIR_ACCOUNT_NEW + "/" + text + ".json").exists()) {
             edit2.setError(getString(R.string.login_error_exist_username));
         } else if (!edit3.getText().toString().isEmpty()) {
-            edit3.setError(getString(R.string.login_error_offline_password));
+            edit3.setError(getString(R.string.login_error_local_password));
         } else {
             MinecraftAccount builder = new MinecraftAccount();
             builder.isMicrosoft = false;
@@ -605,8 +605,8 @@ public class PojavLoginActivity extends BaseActivity
     public void loginMC(final View v)
     {
         
-        if (sOffline.isChecked()) {
-            mProfile = loginOffline();
+        if (sLocal.isChecked()) {
+            mProfile = loginLocal();
             playProfile(false);
         } else {
             ProgressBar prb = findViewById(R.id.launcherAccProgress);
