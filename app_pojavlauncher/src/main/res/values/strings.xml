@@ -66,7 +66,7 @@
     <string name="mcl_launch_downloading">Downloading %s</string>
     <string name="mcl_launch_downloading_progress">"Downloading %s (%.2f MB / %.2f MB)"</string>
     <string name="mcl_launch_download_assets">Preparing to download resources</string>
-    <string name="mcl_launch_error_localmode">Minecraft couldn't be legally installed when logged in with a local account. Please switch to an online account to continue.</string>
+    <string name="mcl_launch_error_localmode">Minecraft couldn\'t be legally installed when logged in with a local account. Please switch to an online account to continue.</string>
 
     <string name="mcl_options">Options</string>
     <string name="mcl_option_modinstall">Launch a mod installer (Forge, LabyMod, Fabric, etc...)</string>
