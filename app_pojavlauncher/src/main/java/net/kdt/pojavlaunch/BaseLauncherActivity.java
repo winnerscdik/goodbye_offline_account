@@ -111,7 +111,7 @@ public abstract class BaseLauncherActivity extends BaseActivity {
                         .setTitle(R.string.global_error)
                         .setMessage(R.string.mcl_launch_error_localmode)
                         .setPositiveButton(android.R.string.ok, null)
-                        .show()
+                        .show();
                 }
             } else {
                 mTask.execute(mProfile.selectedVersion);
