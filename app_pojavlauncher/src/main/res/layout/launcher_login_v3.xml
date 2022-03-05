@@ -125,16 +125,7 @@
         app:layout_constraintStart_toStartOf="@+id/textInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
-    <CheckBox
-        android:id="@+id/login_switch_offline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:text="@string/login_offline_label"
-        app:layout_constraintStart_toStartOf="@+id/login_switch_remember"
-        app:layout_constraintTop_toBottomOf="@+id/login_switch_remember" />
-
-    <com.kdt.mcgui.MineButton
+   <com.kdt.mcgui.MineButton
         android:id="@+id/mineButton"
         android:layout_width="0dp"
         android:layout_height="42dp"
